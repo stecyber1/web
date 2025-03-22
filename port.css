@@ -1,0 +1,73 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            display:grid;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-color: rgb(232, 17, 13);
+        }
+
+        .cards-container {
+            display:block;
+            gap: 5px;
+        }
+        .card {
+            background: #f6f7f9;
+            border-radius: 10px;
+            box-shadow: 10 px rgba(167, 4, 4, 0.1);
+            width: 100%;
+            height: auto;
+            padding: 40px;
+            margin: 10px;
+            text-align: center;
+        }
+        .card img {
+            max-width: 80%;
+            border-radius: 20px;
+            height: 15em;
+            width: 30em;
+        }
+        .card-title {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .card-description {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .card-button {
+            margin-top: 10px;
+            padding: 10px 15;
+        }
+
+        p {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 16px;
+            font-weight: bold
+
+}       h1 {
+            text-align: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(48, 20, 231);
+            font-size: 25px;
+            font-weight: bold
+
+}
+        h2 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(12, 46, 66);
+            font-size: 15px;
+            font-weight: bold
+        }
+
+        img {
+            width: 7em;
+            height: 7em;
+        }

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projet Cybersécurité - Découvrez nos CV et notre portfolio.">
+    <title>Projet Cybersécurité - Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" type="image/jpg" href="Logo.jpg">
+
+    <section class="contact-section">
+        <h2>Contactez-nous</h2>
+        <form id="contactForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error" id="nameError"></span>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="emailError"></span>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+            <span class="error" id="messageError"></span>
+
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <p class="success" id="successMessage" style="display: none;">Votre message a été envoyé avec succès !</p>
+    </section>
+
+    <footer>
+        <p>&copy; Crée par Stella et inspiré de la ligne de code du site de groupe</p>
+    </footer>
+
+    <script>
+
+        function launchConfetti() {
+            const duration = 3 * 1000; // Durée de l'animation en ms
+            const end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            })();
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            let valid = true;
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('messageError').textContent = '';
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (name.trim() === '') {
+                document.getElementById('nameError').textContent = 'Veuillez entrer votre nom.';
+                valid = false;
+            }
+
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').textContent = 'Veuillez entrer un email valide.';
+                valid = false;
+            }
+
+            if (message.trim() === '') {
+                document.getElementById('messageError').textContent = 'Veuillez entrer un message.';
+                valid = false;
+            }
+
+            if (valid) {
+                document.getElementById('contactForm').reset();
+                document.getElementById('successMessage').style.display = 'block';
+                launchConfetti(); // Lance les confettis 🎉
+            }
+        });
+
+        function toggleMenu() {
+            var menu = document.getElementById("nav-links");
+            menu.classList.toggle("show");
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            let valid = true;
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('messageError').textContent = '';
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (name.trim() === '') {
+                document.getElementById('nameError').textContent = 'Veuillez entrer votre nom.';
+                valid = false;
+            }
+
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').textContent = 'Veuillez entrer un email valide.';
+                valid = false;
+            }
+
+            if (message.trim() === '') {
+                document.getElementById('messageError').textContent = 'Veuillez entrer un message.';
+                valid = false;
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            } else {
+                event.preventDefault();
+                document.getElementById('contactForm').reset();
+                document.getElementById('successMessage').style.display = 'block';
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1"></script>
+
+</body>
+
+</html>

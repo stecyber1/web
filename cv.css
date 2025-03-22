@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  background-image:url(https://wallpaperaccess.com/full/9232329.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+h1 {
+  text-align: center;
+  color: orangered;
+}
+h2 {
+  text-align: center;
+  text-decoration:solid;
+  font-family: 'Arial', sans-serif; 
+  font-style: italic; /* Texte en italique */
+  text-overflow: clip;
+  color: rgb(249, 249, 250);
+  font-size: 20px;
+}
+
+img {
+  width: 13em;
+  height: 13em;
+  border-radius: 50%;
+  border: solid 2px rgb(247, 247, 249);
+  position: relative;
+  top: 30px; 
+}
+.container {
+  margin-top: ;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.card {
+  box-shadow: rgb(247, 247, 247);
+  background-color: rgb(26, 7, 83);
+  width: 400px;
+  height: 550px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 20px 40px rgb(238, 235, 235);
+
+
+}
+
+.card-top {
+  background-color: rgb(26, 7, 83);
+  text-decoration: line-through;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+
+}
+.card-infos {
+  background-color: rgb(26, 7, 83);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1em 0 1em;
+}
+
+.name {
+  color: rgb(251, 251, 254);
+}
+
+.job {
+  margin-top: 0.5em;
+  text-transform: uppercase;
+  color: rgb(252, 248, 248);
+}
+
+.quote {
+  margin-top: 2em;
+  color: white;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  margin-top: 0px;
+  font-size: 0.7em;
+   
+}
+
+.button {
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+button {
+  border: solid 3px lightcoral;
+  border-radius: 5px;
+  background: orangered;
+  color:white;
+  cursor: pointer;
+
+}
+
+button:hover {
+  background: white;
+  color: orangered;
+   
+}
